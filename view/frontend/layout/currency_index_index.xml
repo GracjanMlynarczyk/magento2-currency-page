@@ -1,0 +1,25 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" xsi:type="string" name="title">Currency</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="content">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="ghratzoo.currency.list"
+                   template="Ghratzoo_EuroCurrency::html/currency.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="currency" xsi:type="array">
+                                <item name="component" xsi:type="string">Ghratzoo_EuroCurrency/js/view/currency</item>
+                                <item name="template" xsi:type="string">Ghratzoo_EuroCurrency/currency</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<routes  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route method="GET" url="/V1/currency/usd">
+        <service class="Ghratzoo\EuroCurrency\Api\CurrencyUSD" method="getRateUSD"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route method="GET" url="/V1/currency/bycode/:curr">
+        <service class="Ghratzoo\EuroCurrency\Api\CurrencyUSD" method="getRate"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
+

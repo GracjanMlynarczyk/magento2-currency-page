@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Ghratzoo\EuroCurrency\Api\CurrencyUSD" type="Ghratzoo\EuroCurrency\Service\CurrencyUSD"/>
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="ghratzoo_eurocurrency_currencies" xsi:type="object">
+                    Ghratzoo\EuroCurrency\Console\Command\Currencies
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>
+
